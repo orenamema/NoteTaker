@@ -4,10 +4,10 @@ const fs = require('fs')
 
 
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
 app.use(express.static('public'))
 
 
@@ -18,15 +18,12 @@ app.get("/notes", function(req, res) {
   res.sendfile('public/notes.html');
 });
 
-app.get("*", function(req, res) {
-  // res.sendFile(path.join(__dirname, "index.html"));
-  res.sendfile('public/index.html');
-});
+
 
 app.get("/api/notes", function(req, res) {
   // res.sendFile(path.join(__dirname, "index.html"));
   console.log("Notes were asked!");
-  var notes = readNotes();
+  var notes = readNote();
   res.send(notes);
 });
 
@@ -35,6 +32,11 @@ app.post('/api/notes', function (req, res) {
   // console.log(req.body);
   saveNote(req.body);
 })
+
+app.get("*", function(req, res) {
+  // res.sendFile(path.join(__dirname, "index.html"));
+  res.sendfile('public/index.html');
+});
 
 ////////////// HELPER FUNCTIONS //////////////
 
@@ -48,7 +50,7 @@ function saveNote(the_data){
 }
 
 function readNote(){
-  var data = fs.readFileSync('db/db.json','utf8');
+  var data = JSON.parse(fs.readFileSync('db/db.json','utf8'));
   // console.log(the_data);
   // console.log(data);
   return data;

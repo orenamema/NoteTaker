@@ -9,6 +9,7 @@ var activeNote = {};
 
 // A function for getting all notes from the db
 var getNotes = function() {
+  console.log("I get Notes");
   return $.ajax({
     url: "/api/notes",
     method: "GET"
@@ -127,6 +128,7 @@ var renderNoteList = function(notes) {
 
 // Gets notes from the db and renders them to the sidebar
 var getAndRenderNotes = function() {
+  console.log("I RENDER");
   return getNotes().then(function(data) {
     renderNoteList(data);
   });
