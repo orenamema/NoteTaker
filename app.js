@@ -7,7 +7,6 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
-
 // app.use(express.json());
 app.use(express.static('public'))
 
@@ -64,7 +63,7 @@ function readNote(){
 //     method: "DELETE"
 //}
 //   });
-
+// Identify which notes need to be deleted
 
 // GET /api/notes - Should read the db.json file and return all saved notes as JSON.
 
