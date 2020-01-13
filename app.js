@@ -20,14 +20,14 @@ app.get("/notes", function(req, res) {
 
 app.get("*", function(req, res) {
   // res.sendFile(path.join(__dirname, "index.html"));
-  res.sendfile('public/notes.html');
+  res.sendfile('public/index.html');
 });
 
 app.get("/api/notes", function(req, res) {
   // res.sendFile(path.join(__dirname, "index.html"));
   console.log("Notes were asked!");
-  // var notes = readNotes();
-  // res.send(notes);
+  var notes = readNotes();
+  res.send(notes);
 });
 
 app.post('/api/notes', function (req, res) {
