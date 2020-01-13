@@ -6,10 +6,10 @@ const fs = require('fs')
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+
 // app.use(express.json());
 app.use(express.static('public'))
-
 
 ////////////// ROUTES //////////////
 
@@ -17,7 +17,6 @@ app.get("/notes", function(req, res) {
   // res.sendFile(path.join(__dirname, "notes.html"));
   res.sendfile('public/notes.html');
 });
-
 
 
 app.get("/api/notes", function(req, res) {
@@ -29,7 +28,7 @@ app.get("/api/notes", function(req, res) {
 
 app.post('/api/notes', function (req, res) {
   // res.send('POST request to the homepage')
-  // console.log(req.body);
+  console.log(req.body);
   saveNote(req.body);
 })
 
@@ -55,6 +54,17 @@ function readNote(){
   // console.log(data);
   return data;
 }
+
+//Delete Notes Function
+
+// function deleteNote(id){
+// var data = JSON.parse(fs.readFileSync('db/db.json','utf8'));
+// return $.ajax({
+//     url: "api/notes/" + id,
+//     method: "DELETE"
+//}
+//   });
+
 
 // GET /api/notes - Should read the db.json file and return all saved notes as JSON.
 
