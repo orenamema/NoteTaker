@@ -14,6 +14,8 @@ I have created an application that can be used to write, save, and delete notes.
 
 ## Application
 
+![alt text](https://github.com/orenamema/NoteTaker/raw/master/public/assets/images/note.gif)
+
 ## Requirements
 
 It includes the following HTML routes:
