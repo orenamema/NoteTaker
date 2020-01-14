@@ -5,12 +5,11 @@
 I have created an application that can be used to write, save, and delete notes.This application is great for users that have a hard time remembering notes, it helps them take notes, store and delete them at their leisure. This application uses an express backend and save and retrieve note data from a JSON file.
 
 ## Technology Used
-* JSON
-* HTML
-* Heroku
+* [JSON](https://www.npmjs.com/package/json)
+* [Heroku](https://dashboard.heroku.com)
 * APIs
-* JS
-* Express
+* [Node.js](https://nodejs.org/en/)
+* [Express](https://expressjs.com/)
 
 ## Application
 
