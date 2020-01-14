@@ -4,6 +4,18 @@
 
 I have created an application that can be used to write, save, and delete notes.This application is great for users that have a hard time remembering notes, it helps them take notes, store and delete them at their leisure. This application uses an express backend and save and retrieve note data from a JSON file.
 
+## Technology Used
+* JSON
+* HTML
+* Heroku
+* APIs
+* JS
+* Express
+
+## Application
+
+## Requirements
+
 It includes the following HTML routes:
 
 * GET /notes - Should return the notes.html file.
@@ -17,19 +29,35 @@ I have also used the following API routes:
 * POST /api/notes
 * DELETE /api/notes/:id 
 
-## Technology Used
-* JSON
-* HTML
-* Heroku
-* APIs
-* JS
-* Express
-
-## Application
-
-## Requirements
-
 ## Code
+```
+function saveNote(the_data){
+  var data = JSON.parse(fs.readFileSync('db/db.json','utf8'));
+  the_data['id'] = data.length;
+  data.push(the_data);
+  fs.writeFile('db/db.json', JSON.stringify(data), (err) => {
+    if (err) throw err;
+    console.log('Note Saved to File!');
+  });
+}
+
+function readNote(){
+  var data = JSON.parse(fs.readFileSync('db/db.json','utf8'));
+  return data;
+}
+
+function deleteNote(the_index){
+  var data = JSON.parse(fs.readFileSync('db/db.json','utf8'));
+  if (the_index >= 1){ 
+    data.splice(the_index,1);
+    fs.writeFile('db/db.json', JSON.stringify(data), (err) => {
+      if (err) throw err;
+      console.log('File Deleted!');
+    });
+  }
+}
+```
+The code above highlights the 3 different functions used to save, read and delete the notes.
 
 ## Author
 
