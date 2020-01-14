@@ -20,8 +20,8 @@ I have created an application that can be used to write, save, and delete notes.
 
 It includes the following HTML routes:
 
-* GET /notes - Should return the notes.html file.
-* GET * - Should return the index.html file
+* GET /notes - Returns the notes.html file.
+* GET * - Returns the index.html file
 
 The application has a JSON file using the fs module.
 
