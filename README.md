@@ -67,3 +67,4 @@ The code above highlights the 3 different functions used to save, read and delet
 
 * [Github](https://github.com/orenamema)
 * [LinkedIn](https://www.linkedin.com/in/oren-amematekpo-b7a12b13)
+* [Portfolio](https://orenamema.github.io/UpdatedPortfolio/)
