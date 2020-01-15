@@ -21,16 +21,16 @@ Here is the application [link](https://frozen-headland-89865.herokuapp.com/)
 
 It includes the following HTML routes:
 
-* `GET /notes` - Must return the notes.html file.
-* `GET *` - Must return the index.html file
+* GET `/notes` - Must return the notes.html file.
+* GET `*` - Must return the index.html file
 
 The application has a JSON file using the fs module.
 
 I have also used the following API routes:
 
-* `GET` /api/notes 
-* `POST` /api/notes
-* `DELETE` /api/notes/:id 
+* GET `/api/notes` 
+* POST `/api/notes`
+* DELETE `/api/notes/:id` 
 
 ## Code
 ```
