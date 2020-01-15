@@ -7,13 +7,20 @@ I have created an application that can be used to write, save, and delete notes.
 ## Technology Used
 * [JSON](https://www.npmjs.com/package/json)
 * [Heroku](https://dashboard.heroku.com)
-* APIs
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Node.js](https://nodejs.org/en/)
 * [Express](https://expressjs.com/)
 
 ## Application
 
 ![alt text](https://github.com/orenamema/NoteTaker/raw/master/public/assets/images/note.gif)
+
+In order to take notes with this application, the user needs to follow the steps:
+
+* Navigate to Notetaker in the terminal
+* Then the app with the command `node app.js`
+* Then open your browser and enter the link for PORT:3000
+* Click on get started and start entering your notes
 
 Here is the application [link](https://frozen-headland-89865.herokuapp.com/)
 
