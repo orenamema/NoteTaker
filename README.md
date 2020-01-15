@@ -22,7 +22,7 @@ In order to take notes with this application, the user needs to follow the steps
 * Then open your browser and enter the link for `PORT:3000`
 * Click on get started and start entering your notes
 
-Here is the application [link](https://frozen-headland-89865.herokuapp.com/)
+Here is the application [link](https://frozen-headland-89865.herokuapp.com/) deployed on Heroku
 
 ## Requirements
 
